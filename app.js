@@ -36,7 +36,7 @@ sayHi(); */
 
 //  Function in function
 
-const callFunction = (fun) => {
+/* const callFunction = (fun) => {
   fun();
 };
 
@@ -44,4 +44,10 @@ const sayBye = function () {
   console.log('Bye');
 };
 
-callFunction(sayBye);
+callFunction(sayBye); */
+
+/* Modules and Require- require() funciton from another file */
+
+const counterFromOutside = require('./count');
+
+console.log(counterFromOutside(['JS', 'NodeJS', 'React JS']));
