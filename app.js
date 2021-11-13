@@ -48,6 +48,14 @@ callFunction(sayBye); */
 
 /* Modules and Require- require() funciton from another file */
 
-const counterFromOutside = require('./count');
+/* const counterFromOutside = require('./stuff');
 
-console.log(counterFromOutside(['JS', 'NodeJS', 'React JS']));
+console.log(counterFromOutside(['JS', 'NodeJS', 'React JS'])); */
+
+/* Module Patterns--- import functions from module (counter, adder, pi) */
+
+const stuff = require('./stuff');
+
+console.log(stuff.counter(['JS', 'NodeJS', 'React JS']));
+console.log(stuff.adder(2, 3));
+console.log(stuff.adder(stuff.pi, 5));
