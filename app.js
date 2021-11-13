@@ -15,5 +15,33 @@ const timer = setInterval(() => {
   }
 }, 2000); */
 
-console.log(__dirname);
-console.log(__filename);
+// console.log(__dirname);
+// console.log(__filename);
+
+/* Function Expression */
+
+//  Normal function statement
+
+/* function sayHi() {
+  console.log('Hi');
+}
+
+sayHi(); */
+
+//  Function  expression
+
+/* const sayBye = function () {
+    console.log('Bye');
+  }; */
+
+//  Function in function
+
+const callFunction = (fun) => {
+  fun();
+};
+
+const sayBye = function () {
+  console.log('Bye');
+};
+
+callFunction(sayBye);
