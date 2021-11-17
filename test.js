@@ -8,16 +8,20 @@ const chunkSize = fs.createReadStream(argv[2]).readableHighWaterMark;
 
 const { size } = fs.statSync(argv[2]);
 
-console.log(size / chunkSize);
-
 const pb = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
 
 let counter = 0;
 
-// pb.start(100, counter);
+pb.start(size / 1000, 0);
 
 readStream.on('data', (chunk) => {
   if (chunk) {
-    console.log(counter++);
+    pb.update(calculateChunk());
+  } else {
+    pb.stop();
   }
 });
+
+const calculateChunk = () => {
+  return (counter += chunkSize / 1000);
+};
