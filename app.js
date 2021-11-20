@@ -54,8 +54,8 @@ console.log(counterFromOutside(['JS', 'NodeJS', 'React JS'])); */
 
 /* Module Patterns--- import functions from module (counter, adder, pi) */
 
-const stuff = require('./stuff');
+/* const stuff = require('./stuff');
 
 console.log(stuff.counter(['JS', 'NodeJS', 'React JS']));
 console.log(stuff.adder(2, 3));
-console.log(stuff.adder(stuff.pi, 5));
+console.log(stuff.adder(stuff.pi, 5)); */
