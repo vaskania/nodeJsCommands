@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "format": "prettier --write *.js && eslint --fix *.js",
-    "lint": "eslint . && prettier --check *.js"
+    "lint": "eslint . && prettier --check *.js",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,13 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "husky": "^7.0.4",
+    "lint-staged": "^12.0.3",
     "prettier": "2.4.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
   }
 }
