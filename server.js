@@ -6,6 +6,5 @@ const server = http.createServer((req, res) => {
   res.write('hello world');
   res.end();
 });
-
 // eslint-disable-next-line no-console
 server.listen(3000, () => console.log('App is running'));

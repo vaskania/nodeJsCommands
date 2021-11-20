@@ -5,12 +5,11 @@ module.exports = {
     commonjs: true,
     es2021: true,
   },
-  extends: ['eslint:recommended'],
+  extends: ['airbnb-base'],
   parserOptions: {
     ecmaVersion: 13,
   },
   rules: {
-    semi: 0,
-    singleQuote: 0,
+    'no-console': 'error',
   },
 };
